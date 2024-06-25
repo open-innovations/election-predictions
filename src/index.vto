@@ -7,7 +7,8 @@ title: Hexmap
     data: page.data["predictions-2024"],
     matchKey: "new_pcon",
     value: "winner",
-    label: "{{ n | slice(0,3) }}"
+    label: "{{ n | slice(0,3) }}",
+    tooltip: "<strong>{{ n }}</strong><br />Winner: <strong class=\"number\">{{ {{ _value }} }}</strong>"
   }
 })}}
 
