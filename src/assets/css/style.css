@@ -2,3 +2,4 @@
 /* These are imported by the PostCSS processor. Source is in the `_includes/css` folder */
 @import 'css/reset.css';
 @import 'css/legend.css';
+@import 'css/filter.css';

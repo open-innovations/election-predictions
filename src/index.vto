@@ -5,6 +5,10 @@ title: Hexmap
   config: {
     hexjson: hexjson["uk-constituencies-2023"],
     data: page.data["predictions-2024"],
+    columns:[{
+			name: "filterLabel",
+			template: "{{ n }}"
+			}],
     legend: 
       { position: "top right",
         title: 'Key',
@@ -50,7 +54,12 @@ title: Hexmap
     matchKey: "new_pcon",
     value: "winner",
     label: "{{ n | slice(0,3) }}",
-    tooltip: "<strong>{{ n }}</strong><br />Winner: <strong>{{ {{ _value }} }}</strong>"
+    tools:{
+			filter:{
+				label: "filterLabel"
+				}
+			},
+    tooltip: "<strong>{{ n }}</strong><br />Winning party: <strong>{{ {{ _value }} }}</strong>"
   }
 })}}
 

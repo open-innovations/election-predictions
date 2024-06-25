@@ -1,0 +1,6 @@
+.oi-filter .oi-filter-button { border: 0px; background: lightgrey; border-radius: 1.5rem; }
+.oi-filter.searching .oi-filter-button { border-top-right-radius: 0; border-bottom-right-radius: 0;  }
+.oi-filter-button svg g { stroke: black; }
+.oi-filter input { border: solid var(--filter-padding) lightgray; border-radius: 1.5rem; }
+.oi-filter-results { padding: 0 1rem; }
+.oi-filter-results button { border: 0; }
