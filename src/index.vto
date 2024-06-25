@@ -4,7 +4,7 @@ title: Hexmap
 {{ comp.oi.map.hex_cartogram({
   config: {
     hexjson: hexjson["uk-constituencies-2023"],
-    data: page.data["predictions-2024"],
+    data:  hexDataFormatter(page.data["predictions-2024"]),
     columns:[{
 			name: "filterLabel",
 			template: "{{ n }}"
@@ -59,8 +59,8 @@ title: Hexmap
 				label: "filterLabel"
 				}
 			},
-    tooltip: "<strong>{{ n }}</strong><br />Winning party: <strong>{{ {{ _value }} }}</strong>"
-  }
+    tooltip: "{{ tooltip }}",
+   }
 })}}
 
 {{# DEBUGGING #}}
