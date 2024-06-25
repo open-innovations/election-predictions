@@ -1,7 +1,16 @@
 ---
 title: Hexmap
 ---
+{{ comp.oi.map.hex_cartogram({
+  config: {
+    hexjson: hexjson["uk-constituencies-2023"],
+    data: page.data["predictions-2024"],
+    matchKey: "new_pcon",
+    value: "winner",
+    label: "{{ n | slice(0,3) }}"
+  }
+})}}
 
-<h1>{{ title }}</h1>
-
-<p>Hexmap to go here...</p>
+{{# DEBUGGING #}}
+{{ page.data["predictions-2024"] |> JSON.stringify }}
+{{ hexjson["uk-constituencies-2023"] |> JSON.stringify }}
