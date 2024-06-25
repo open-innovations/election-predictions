@@ -5,6 +5,48 @@ title: Hexmap
   config: {
     hexjson: hexjson["uk-constituencies-2023"],
     data: page.data["predictions-2024"],
+    legend: 
+      { position: "top",
+        title: 'Key',
+        items: [
+          {
+            value: '#0087DC',
+            label: 'Conservative' 
+          },
+          {
+            value: '#E4003B',
+            label: 'Labour'
+          },
+          {
+            value: '#008066',
+            label: 'Green'
+          },
+          {
+            value: '#FDBB30',
+            label: 'Liberal Democrats'
+          },
+          {
+            value: '#12B6CF',
+            label: 'Reform UK'
+          },
+          {
+            value: '#FFF95D',
+            label: 'SNP'
+          },
+          {
+            value: '#3F8428',
+            label: 'Plaid Cymru'
+          },
+          {
+            value: '#440d54',
+            label: 'Other'
+          },
+          {
+            value: '#808080',
+            label: 'Speaker'
+          }
+        ]
+      },
     matchKey: "new_pcon",
     value: "winner",
     label: "{{ n | slice(0,3) }}",
@@ -13,5 +55,5 @@ title: Hexmap
 })}}
 
 {{# DEBUGGING #}}
-{{ page.data["predictions-2024"] |> JSON.stringify }}
-{{ hexjson["uk-constituencies-2023"] |> JSON.stringify }}
+{{# {{ page.data["predictions-2024"] |> JSON.stringify }}
+{{ hexjson["uk-constituencies-2023"] |> JSON.stringify }} #}}
