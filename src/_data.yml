@@ -1,17 +1,11 @@
-layout: template/page.njk
-date: Git Last Modified
-
-# Override the site logo colour here. Any CSS colour will work.
-logo_colour: black
-
-# Override the header class here. See https://open-innovations.org/brand for colour classes
-header_class: c5-bg
+layout: template/base.vto
 
 # Automatically adds meta and social tags 
 # See https://lume.land/plugins/metas/
 metas:
-  site: Open Innovations Lume Template Site
-  description: A template site for Open Innovations
+  title: "=title"
+  site: Election Predictions
+  description: Visualisations of election predictions
   image: https://open-innovations.org/resources/images/logos/oi-square.png
   twitter: openinnovates
   lang: en
