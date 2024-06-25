@@ -1,0 +1,5 @@
+scripts:
+  fonts:
+    cmd:
+      - curl -Lo src/assets/fonts/1689c63c30612a3a34cf.woff2 https://wethink.report/assets/fonts/1689c63c30612a3a34cf.woff2
+      - curl -Lo src/assets/fonts/6da116a84bd0232c037b.woff2 https://wethink.report/assets/fonts/6da116a84bd0232c037b.woff2

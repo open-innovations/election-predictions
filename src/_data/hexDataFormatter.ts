@@ -1,13 +1,5 @@
-const parties = [
-  "con",
-  "lab",
-  "green",
-  "ld",
-  "ref",
-  "snp",
-  "pc",
-  "other",
-]
+import parties from './parties.ts';
+
 export default (data: Record<string, unknown>[]) => {
 
   const results = data.reduce((a, c) => ({
@@ -32,7 +24,7 @@ export default (data: Record<string, unknown>[]) => {
 
     return {
       ...c,
-      tooltip: `<h1>${c.pcon_nm}</h1><p>Winner: ${ c.winner }</p><table><thead><tr><th scope="column">Party</th><th scope="column">Prediction</th></tr></thead><tbody>${ resultTable }</tbody></table>`
+      tooltip: `<strong class="title">${c.pcon_nm}</strong><p>Winner: ${ c.winner }</p><table><thead><tr><th scope="column">Party</th><th scope="column">Prediction</th></tr></thead><tbody>${ resultTable }</tbody></table>`
     }
   });
 }

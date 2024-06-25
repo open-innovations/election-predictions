@@ -1,0 +1,33 @@
+@font-face {
+  font-display: swap;
+  font-family: Suisse;
+  font-weight: 400;
+  src: url(../fonts/1689c63c30612a3a34cf.woff2) format("woff2")
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Suisse;
+  font-weight: 700;
+  src: url(../fonts/6da116a84bd0232c037b.woff2) format("woff2")
+}
+
+html {
+  font-family: 'Helvetica Neue', Helvetica, 'Source Sans Pro', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: Suisse;
+}
+
+.title {
+  font-family: Suisse;
+  font-size: 1.3em;
+}
+
+.tooltip {
+  & table {
+    width: 20em;
+    table-layout: fixed;
+    text-align: center;
+  }
+}
