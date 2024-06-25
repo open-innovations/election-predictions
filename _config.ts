@@ -38,6 +38,6 @@ site.remoteFile(
   "https://open-innovations.org/resources/images/logos/oi-square-black.svg",
 );
 
-site.copy('assets/fonts/');
+site.copy("assets/fonts/");
 
 export default site;

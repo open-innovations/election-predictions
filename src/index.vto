@@ -1,67 +1,30 @@
 ---
 title: Hexmap
 ---
+
 {{ comp.oi.map.hex_cartogram({
   config: {
     hexjson: hexjson["uk-constituencies-2023"],
     data:  hexDataFormatter(page.data["predictions-2024"]),
-    columns:[{
-			name: "filterLabel",
-			template: "{{ n }}"
-			}],
-    legend: 
-      { position: "top right",
-        title: 'Key',
-        items: [
-          {
-            value: '#0087DC',
-            label: 'Conservative' 
-          },
-          {
-            value: '#E4003B',
-            label: 'Labour'
-          },
-          {
-            value: '#008066',
-            label: 'Green'
-          },
-          {
-            value: '#FDBB30',
-            label: 'Liberal Democrats'
-          },
-          {
-            value: '#12B6CF',
-            label: 'Reform UK'
-          },
-          {
-            value: '#FFF95D',
-            label: 'SNP'
-          },
-          {
-            value: '#3F8428',
-            label: 'Plaid Cymru'
-          },
-          {
-            value: '#440d54',
-            label: 'Other'
-          },
-          {
-            value: '#808080',
-            label: 'Speaker'
-          }
-        ]
-      },
+    columns:[
+      { name: "filterLabel", template: "{{ n }}" },
+    ],
+    legend: {
+      position: "top right",
+      title: 'Key',
+      items: Object.entries(parties).map(([value, label]) => ({ value: colour.names[value], label })),
+    },
     matchKey: "new_pcon",
     value: "winner",
     label: "{{ n | slice(0,3) }}",
-    tools:{
+    tools: {
 			filter:{
 				label: "filterLabel"
-				}
-			},
+      }
+    },
     tooltip: "{{ tooltip }}",
-   }
-})}}
+  }
+}) }}
 
 {{# DEBUGGING #}}
 {{# {{ page.data["predictions-2024"] |> JSON.stringify }}

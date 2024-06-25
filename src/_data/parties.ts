@@ -8,4 +8,4 @@ export default {
   "pc": "Plaid Cymru",
   "other": "Other",
   "speaker": "Speaker",
-}
+};
